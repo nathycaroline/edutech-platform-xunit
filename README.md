@@ -58,7 +58,7 @@ Fórmula:
 Retorna a situação acadêmica conforme a média final:
 
 - Média maior ou igual a 7,0: `APROVADO`.
-- Média entre 5,0 e abaixo de 7,0: `RECUPERACAO`.
+- Média maior ou igual a 5,0 e abaixo de 7,0: `RECUPERACAO`.
 - Média abaixo de 5,0: `REPROVADO`.
 
 ### FrequenciaService
@@ -134,12 +134,12 @@ Execute os testes unitários:
 dotnet test
 ```
 
-**Observação:** os comandos de compilação e teste dependem de os projetos da aplicação e de testes estarem adicionados à solução.
+Ao executar os testes, o resultado esperado é que todos os cenários sejam concluídos sem falhas.
 
-## Estrutura esperada do projeto
+## Estrutura do projeto
 
 ```text
-EduTechPlatform/
+edutech-platform-xunit/
 ├── EduTechPlatform.slnx
 ├── .gitignore
 ├── LICENSE
@@ -147,17 +147,19 @@ EduTechPlatform/
 ├── EduTechPlatform.App/
 │   ├── EduTechPlatform.App.csproj
 │   ├── Program.cs
-│   ├── NotaDesempenhoService.cs
-│   ├── FrequenciaService.cs
-│   └── MatriculaFinanceiraService.cs
+│   └── services/
+│       ├── NotaDesempenhoService.cs
+│       ├── FrequenciaService.cs
+│       └── MatriculaFinanceiraService.cs
 └── EduTechPlatform.Tests/
     ├── EduTechPlatform.Tests.csproj
-    ├── NotaDesempenhoServiceTests.cs
     ├── FrequenciaServiceTests.cs
-    └── MatriculaFinanceiraServiceTests.cs
+    ├── MatriculaFinanceiraServiceTests.cs
+    ├── NotaDesempenhoServiceTests.cs
+    └── UnitTest1.cs
 ```
 
-A estrutura acima representa a organização planejada. Os arquivos de serviços e testes serão adicionados conforme o trabalho dos desenvolvedores responsáveis por essas etapas.
+A estrutura apresenta a organização do projeto, incluindo os serviços responsáveis pelas regras de negócio e os arquivos de testes unitários.
 
 ## Responsabilidades da equipe
 
@@ -167,4 +169,4 @@ A estrutura acima representa a organização planejada. Os arquivos de serviços
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter os termos completos.
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](https://github.com/nathycaroline/edutech-platform-xunit/blob/main/LICENSE) para obter os termos completos.
